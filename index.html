@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
+    <!-- lien avec le ou les fichiers CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
     <header role="banner">
@@ -27,9 +29,9 @@
                 <ul>
                     <li><a href="#balises-html-de-contenu-de-texte">Balises HTML de contenu de texte</a></li>
                     <li><a href="#balises-html-de-modification-du-texte">Balises HTML de modification du texte</a></li>
-                    <li><a href="">"Mise à zéro du CSS"</a></li>
-                    <li><a href="">Dimensions web et CSS</a></li>
-                    <li><a href="">Les positions en CSS</a></li>
+                    <li><a href="#mise-a-zero-du-css">"Mise à zéro du CSS"</a></li>
+                    <li><a href="dimensions-web-et-css">Dimensions web et CSS</a></li>
+                    <li><a href="les-positions-en-css">Les positions en CSS</a></li>
                     <li><a href="">Le CSS adaptatif</a></li>
                 </ul>
             </nav>
@@ -305,7 +307,121 @@
         </section>
         <section>
             <!-- Partie CSS -->
-             
+             <article>
+                <header>
+                    <h2 id="mise-a-zero-du-css">Mise à zéro du CSS</h2>
+                </header>
+                <h3>Les polices de caractères</h3>
+                <p>
+                    La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement (type
+                    Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable d'utiliser une
+                    police sans empâtement (type arial ou helvetica)
+                </p>
+                <h4>Les tailles de polices et le problème du em</h4>
+                <p>
+                    Le em représente la taille par défaut d'une police sur la page dans un paragraphe.<br />
+                    Quand on utilise par exemple h1, la taille généralement appliquée par le navigateur est de 2 fois le
+                    cadratin
+                </p>
+                <p>
+                    Mais le em pose problème : il se calcule par rapport à la taille de la police du parent le plus
+                    proche.
+                </p>
+                <div style="font-size: 2em;border: 1px solid black;padding: 0.5rem;">
+                    2em
+                    <div  style="font-size: 2em;border: 1px solid black;padding: 0.5rem;">
+                        2em
+                    </div>
+                </div>
+                <p>
+                    Version rem
+                </p>
+                <div style="font-size: 2rem;border: 1px solid black;padding: 0.5rem;">
+                    2rem
+                    <div  style="font-size: 2rem;border: 1px solid black;padding: 0.5rem;">
+                        2rem
+                    </div>
+                </div>
+             </article>
+             <article>
+                <header>
+                    <h2 id="dimensions-web-et-css">Dimensions web et CSS</h2>
+                </header>
+                <p>
+                    Par défaut dans le css user agent (css du navigateur), quand on donne une taille (hauteur ou
+                    largeur) à un élément, la taille est calculée par rapport au contenu de l'élément, c'est à dire
+                    qu'elle ne prend pas en compte la taille des marges intérieures (padding) ou de la largeur des
+                    bordures.
+                </p>
+                <p>
+                    le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
+                </p>
+                <div style="box-sizing: content-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;"></div>
+                <div style="box-sizing: border-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;"></div>
+                <p class="toto">
+                   coucou<br />T'es là ?
+                </p>
+             </article>
+             <article>
+                <header>
+                    <h2 id="les-positions-en-css">Les positions en CSS</h2>
+                </header>
+                <p>
+                    La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont déclarés
+                    dans le fichier HTML.
+                </p>
+                <p>
+                    les valeurs :
+                </p>
+                <ul>
+                    <li>
+                        static : par défaut pour les éléments
+                    </li>
+                    <li>
+                        Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des propriétés de
+                        type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                    </li>
+                    <li>
+                        absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son  ancètre le plus proche ayant la position relative.
+                    </li>
+                    <li>
+                        fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le
+                        défilement de la page.
+                    </li>
+                    <li>
+                        sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement
+                        vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il reste
+                        en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                    </li>
+                    <style>
+                        .exemple-position{
+                            width: 300px;
+                            height: 300px;
+                            border-width: 3px;
+                            border-style: solid;
+                            border-color: black;
+                        }
+                        .carre-ex{
+                            width: 50px;
+                            height: 50px;
+                            opacity: 0.5;
+                        }
+                        .carre-rouge{
+                            background-color: darkred;
+                            position: relative;
+                        }
+                        .carre-vert{
+                            background-color: darkgreen;
+                        }
+                    </style>
+                    <div class="exemple-position">
+                        <div class="carre-ex carre-rouge"></div>
+                        <div class="carre-ex carre-vert"></div>
+                    </div>
+                </ul>
+             </article>
         </section>
     </main>
     <footer>
