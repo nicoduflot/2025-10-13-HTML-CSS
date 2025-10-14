@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
     <!-- lien avec le ou les fichiers CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" media="all" />
 </head>
 <body id="top">
     <header role="banner">
@@ -30,9 +30,9 @@
                     <li><a href="#balises-html-de-contenu-de-texte">Balises HTML de contenu de texte</a></li>
                     <li><a href="#balises-html-de-modification-du-texte">Balises HTML de modification du texte</a></li>
                     <li><a href="#mise-a-zero-du-css">"Mise à zéro du CSS"</a></li>
-                    <li><a href="dimensions-web-et-css">Dimensions web et CSS</a></li>
-                    <li><a href="les-positions-en-css">Les positions en CSS</a></li>
-                    <li><a href="">Le CSS adaptatif</a></li>
+                    <li><a href="#dimensions-web-et-css">Dimensions web et CSS</a></li>
+                    <li><a href="#les-positions-en-css">Les positions en CSS</a></li>
+                    <li><a href="#le-css-adaptatif">Le CSS adaptatif</a></li>
                 </ul>
             </nav>
         </aside>
@@ -403,6 +403,9 @@
                             border-style: solid;
                             border-color: black;
                         }
+                        /*
+                        Le D.R.Y. ou "Dont Repeat Yourself" est une façon d'écrire du CSS (ou du code) pour éviter de répéter des déclarations semblables appliqué à divers classes ou éléments
+                        */
                         .carre-ex{
                             width: 50px;
                             height: 50px;
@@ -421,6 +424,11 @@
                         <div class="carre-ex carre-vert"></div>
                     </div>
                 </ul>
+             </article>
+             <article>
+                <header>
+                    <h2 id="le-css-adaptatif">Le CSS adaptatif</h2>
+                </header>
              </article>
         </section>
     </main>

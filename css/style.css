@@ -50,3 +50,33 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background: url('../images/y-so-serious-white.png');
 }
+
+body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* déclaration des media queries */
+
+@media print{
+    body > nav, 
+    .go-top{
+        display: none;
+    }
+
+    @page{
+        size: landscape;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        width: 540px;
+    }
+}
