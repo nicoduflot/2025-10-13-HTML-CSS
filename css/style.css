@@ -44,6 +44,10 @@
     text-decoration: none;
 }
 
+.table-rwd{
+    overflow: auto;
+}
+
 /* déclarations de structure */
 
 body{
@@ -78,5 +82,41 @@ body > header > *,
     main,
     body > footer > *{
         width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body > header > *,
+    body > nav[role="navigation"] > ul,
+    main,
+    body > footer > *{
+        width: 1320px;
     }
 }
