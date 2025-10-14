@@ -6,6 +6,7 @@
 :root{
     font-size: 1.2rem;
     line-height: 1.6rem;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
@@ -28,6 +29,19 @@
 
 .toto::after{
     content: close-quote;
+}
+
+.go-top{
+    position: fixed;
+    bottom : 0.5rem;
+    right: 0.5rem;
+    background-color: darkorange;
+}
+
+.go-top a{
+    margin: 0.5rem;
+    color: white;
+    text-decoration: none;
 }
 
 /* déclarations de structure */
