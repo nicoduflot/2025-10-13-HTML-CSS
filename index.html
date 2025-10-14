@@ -493,6 +493,58 @@
                     Lorem ipsum dolor sit amet consectetur <span style="display: inline;"><b>adipisicing elit</b></span>. Culpa laborum, ipsam eligendi <span style="display: block;"><b>adipisci illum</b></span> voluptas natus suscipit porro voluptatem! Temporibus saepe vel deleniti similique earum quidem, veritatis doloremque cupiditate minima! Lorem, ipsum dolor sit amet consectetur <span style="display: inline-block;"><b>adipisicing elit</b></span>. Non aliquam, ea molestiae quae assumenda dolor dolores incidunt quaerat voluptates. Ab, dolore debitis! Expedita hic atque rerum possimus quia maxime ullam.
                 </p>
                 <h4>Display : flex</h4>
+                <style>
+                    .exemple-display-flex{
+                        border: 1px solid black;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content:flex-start;
+                        --gap-display-flex : 0.5rem;
+                        padding-bottom: var(--gap-display-flex);
+                        padding-left: var(--gap-display-flex);
+                    }
+
+                    .div-flex{
+                        border: 1px solid black;
+                        width: 100%;
+                        margin-top: var(--gap-display-flex);
+                        margin-right: var(--gap-display-flex);
+                    }
+
+                    @media screen and (min-width: 700px) {
+                        .div-flex{
+                           width: calc( 50% - var(--gap-display-flex) );
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1000px) {
+                        .div-flex{
+                            width: calc( ( 100% / 3 ) - var(--gap-display-flex) );
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1200px) {
+                        .div-flex{
+                           width: calc( ( 100% / 4 ) - var(--gap-display-flex) );
+                        }
+                    }
+                </style>
+                <div class="exemple-display-flex">
+                    <div class="div-flex">toto-01</div>
+                    <div class="div-flex">toto-02</div>
+                    <div class="div-flex">toto-03</div>
+                    <div class="div-flex">toto-04</div>
+                    <div class="div-flex">toto-05</div>
+                    <div class="div-flex">toto-06</div>
+                    <div class="div-flex">toto-07</div>
+                    <div class="div-flex">toto-08</div>
+                    <div class="div-flex">toto-09</div>
+                    <div class="div-flex">toto-10</div>
+                    <div class="div-flex">toto-11</div>
+                    <div class="div-flex">toto-12</div>
+                    <div class="div-flex">toto-13</div>
+                    <div class="div-flex">toto-14</div>
+                </div>
              </article>
         </section>
     </main>

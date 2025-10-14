@@ -56,12 +56,52 @@ body{
 }
 
 body > header > *,
-    body > nav[role="navigation"] > ul,
-    main,
-    body > footer > *{
-        margin-left: auto;
-        margin-right: auto;
-    }
+body > nav[role="navigation"] > ul,
+main,
+body > footer > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > nav[role="navigation"] > ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+body > nav[role="navigation"] > ul a{
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid white;
+}
+
+body > nav[role="navigation"] > ul li:last-child a{
+    border-bottom: 1px solid white;
+}
+
+body > header ,
+body > nav[role="navigation"],
+body > footer{
+    background-color: black;
+    color: white;
+}
+
+body > header a,
+body > nav[role="navigation"] a,
+body > footer a{
+    color: white;
+}
+
+body > nav[role="navigation"] a:hover,
+body > nav[role="navigation"] a:focus-visible,
+body > nav[role="navigation"] a:focus{
+    background-color: white;
+    color: black;
+    outline: none;
+}
 
 /* déclaration des media queries */
 
@@ -82,6 +122,25 @@ body > header > *,
     main,
     body > footer > *{
         width: 540px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    body > nav[role="navigation"] > ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav[role="navigation"] > ul a,
+    body > nav[role="navigation"] > ul li:last-child a
+    {
+        border: unset;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    body > nav[role="navigation"] > ul a{
+
     }
 }
 
