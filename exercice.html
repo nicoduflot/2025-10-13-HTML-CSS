@@ -29,13 +29,80 @@
             </p>
             <img src="./support/06-exo-01.png" style="max-width: 100%;" />
             <style>
+                body{
+                    box-sizing: border-box;
+                }
+
                 .mise-en-page{
-                    width: 100%;
                     padding: 0.5rem;
+                    display: grid;
+                    gap: 0.5rem;
+                    grid-template-rows: 1fr 2fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    'vert vert' 
+                    'rouge rouge' 
+                    'bleu orange'
+                    ;
+                }
+
+                .mise-en-page > *{
+                    min-height: 100px;
+                }
+
+                .mise-en-page,
+                .vert,
+                .rouge,
+                .bleu,
+                .orange{
+                    padding: 0.5rem;
+                    border: 5px solid black
+                }
+
+                .vert{
+                    grid-area: vert;
+                    background-color: rgb(14, 165, 14);
+                }
+                
+                .rouge{
+                    grid-area: rouge;
+                    background-color: red;
+                }
+                
+                .bleu{
+                    grid-area: bleu;
+                    background-color: rgb(60, 143, 221);
+                }
+                
+                .orange{
+                    grid-area: orange;
+                    background-color:orange;
+                }
+
+                @media screen and (min-width: 1000px) {
+                    .mise-en-page{
+                        grid-template-columns: 1fr 4fr;
+                        grid-template-areas: 
+                        'rouge rouge' 
+                        'vert bleu' 
+                        'orange orange'
+                        ;
+                    }
                 }
             </style>
             <div class="mise-en-page">
+                <div class="vert">
 
+                </div>
+                <div class="rouge">
+
+                </div>
+                <div class="bleu">
+
+                </div>
+                <div class="orange">
+
+                </div>
             </div>
         </article>
     </main>
