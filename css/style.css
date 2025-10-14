@@ -2,6 +2,7 @@
 /* Si import de CSS, les déclarations d'import DOIVENT être faîtes AVANT n'importe quelle autre déclaration CSS */
 @import url('./bootstrap-icons.css');
 @import url('./roboto.css');
+@import url('./LazenbyCompSmooth.css');
 
 /* Déclarations générales */
 
@@ -15,6 +16,8 @@
     --bg-nav-color: black;
     --nav-color: white;
     --nav-link-color: white;
+    --title-font-size : 2rem;
+    --title-line-height : calc( var(--title-font-size) * 1.1 );
 }
 
 *, *::before, *::after{
@@ -89,6 +92,12 @@
     content: '\F33A';
     color: darkorange;
     font-size: 1.5rem;
+}
+
+.site-title{
+    font-family: 'LazenbyCompSmooth';
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-height);
 }
 
 /* déclarations de structure */
