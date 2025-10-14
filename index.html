@@ -521,16 +521,31 @@
                         .div-flex{
                             width: calc( ( 100% / 3 ) - var(--gap-display-flex) );
                         }
+
+                        .flex-col-2{
+                            width: calc( (( 100% / 3 ) * 2) -  var(--gap-display-flex));
+                        }
                     }
                     
                     @media screen and (min-width: 1200px) {
                         .div-flex{
                            width: calc( ( 100% / 4 ) - var(--gap-display-flex) );
                         }
+
+                        .flex-col-2{
+                            width: calc( (( 100% / 4 ) * 2) -  var(--gap-display-flex));
+                        }
                     }
                 </style>
                 <div class="exemple-display-flex">
-                    <div class="div-flex">toto-01</div>
+                    <div class="div-flex flex-col-2">
+                        <p>
+                            toto-01
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta, fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident reiciendis iure nemo accusantium officia dolores?
+                        </p>
+                    </div>
                     <div class="div-flex">toto-02</div>
                     <div class="div-flex">toto-03</div>
                     <div class="div-flex">toto-04</div>
@@ -544,6 +559,130 @@
                     <div class="div-flex">toto-12</div>
                     <div class="div-flex">toto-13</div>
                     <div class="div-flex">toto-14</div>
+                </div>
+                <h4>Display : grid</h4>
+                <style>
+                    .exemple-display-grid{
+                        border: 1px solid black;
+                        display: grid;
+                        gap: 0.5rem;
+                        padding: 0.5rem;
+                        grid-template-columns: 1fr;
+                    }
+
+                    .div-grid{
+                        border: 1px solid black;
+                    }
+
+                     @media screen and (min-width: 700px) {
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1000px) {
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+
+                        .grid-col-2{
+                            grid-column: span 2;
+                        }
+
+                        .grid-row-2{
+                            grid-row: span 2;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1200px) {
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                        }
+
+                        .grid-col-1{
+                            grid-column: span 1;
+                        }
+                    }
+                </style>
+                <div class="exemple-display-grid">
+                    <div class="div-grid grid-col-2 grid-col-1">
+                        <p>
+                            toto-01
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta, fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident reiciendis iure nemo accusantium officia dolores?
+                        </p>
+                    </div>
+                    <div class="div-grid">toto-02</div>
+                    <div class="div-grid grid-col-2">toto-03</div>
+                    <div class="div-grid">toto-04</div>
+                    <div class="div-grid">toto-05</div>
+                    <div class="div-grid">toto-06</div>
+                    <div class="div-grid">toto-07</div>
+                    <div class="div-grid">toto-08</div>
+                    <div class="div-grid grid-row-2 grid-col-2">toto-09</div>
+                    <div class="div-grid">toto-10</div>
+                    <div class="div-grid">toto-11</div>
+                    <div class="div-grid">toto-12</div>
+                    <div class="div-grid">toto-13</div>
+                    <div class="div-grid">toto-14</div>
+                </div>
+                <h5>grid-template-areas</h5>
+                <p>
+                    Référencer les colonne et les lignes de la grille à des aires dans lequelles les éléments seront placés
+                </p>
+                <style>
+                    .exemple-areas, 
+                    .exemple-areas > *{
+                        border: 1px solid black;
+                    }
+
+                    .exemple-areas{
+                        display: grid;
+                        grid-template-columns: 250px auto;
+                        grid-template-areas: 
+                        'header-areas header-areas' 
+                        'header-main header-main' 
+                        'header-col header-col' 
+                        'header-footer header-footer' 
+                        ;
+                        margin-bottom: 1rem;
+                        row-gap: 0.5rem;
+                        column-gap: 0.5rem;
+                        padding: 0.5rem;
+                    }
+
+                    .header-areas{
+                        grid-area: header-areas;
+                    }
+                    
+                    .header-main{
+                        grid-area: header-main;
+                    }
+                    
+                    .header-col{
+                        grid-area: header-col;
+                    }
+                    
+                    .header-footer{
+                        grid-area: header-footer;
+                    }
+
+                     @media screen and (min-width: 1000px) {
+                        .exemple-areas{
+                            grid-template-areas: 
+                            'header-areas header-areas' 
+                            'header-col header-main' 
+                            'header-footer header-footer' 
+                        ;
+                        }
+                     }
+                </style>
+                <div class="exemple-areas">
+                    <div class="header-areas">header</div>
+                    <div class="header-main">main</div>
+                    <div class="header-col">col</div>
+                    <div class="header-footer">footer</div>
                 </div>
              </article>
         </section>
