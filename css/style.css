@@ -1,3 +1,7 @@
+/* Il est possible d'importer dans un fichier CSS le CSS d'autres fichiers CSS */
+/* Si import de CSS, les déclarations d'import DOIVENT être faîtes AVANT n'importe quelle autre déclaration CSS */
+@import url('./bootstrap-icons.css');
+
 
 /* Déclarations générales */
 
@@ -50,6 +54,41 @@
 
 .table-rwd{
     overflow: auto;
+}
+
+.alert{
+    margin: var(--element-gap);
+    border: 3px solid transparent;
+    border-radius: var(--element-gap);
+    padding: var(--element-gap);
+}
+
+.alert::before{
+    font-family: 'bootstrap-icons';
+}
+
+.alert-info{
+    border-color: blue;
+    background-color: rgba(0, 0, 255, 0.208);
+    color: white;
+}
+
+.alert-info::before{
+    content: '\F430';
+    color: blue;
+    font-size: 1.5rem;
+}
+
+.alert-danger::before{
+    content: '\F851';
+    color: red;
+    font-size: 1.5rem;
+}
+
+.alert-warning::before{
+    content: '\F33A';
+    color: darkorange;
+    font-size: 1.5rem;
 }
 
 /* déclarations de structure */
