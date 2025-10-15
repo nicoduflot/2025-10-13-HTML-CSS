@@ -29,7 +29,7 @@
                     <li><a href="#les-images">Les images</a></li>
                     <li><a href="#audio">L'audio</a></li>
                     <li><a href="#iframe">L'iframe</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="#video-et-audio-hors-site">Vidéo et audio hors site</a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                 </ul>
@@ -164,9 +164,30 @@
                 </ul>
                 <iframe src="./exercice.html" width="100%" height="300px" name="documents">
                     <p>
-                        Votre naigateur ne supporte pas les cadres de pages (iframe)
+                        Votre navigateur ne supporte pas les cadres de pages (iframe)
                     </p>
                 </iframe>
+            </article>
+            <article>
+                <header>
+                    <h2 id="video-et-audio-hors-site">Vidéo et audio hors site</h2>
+                </header>
+                <h3>Vidéo</h3>
+                <figure class="media ratio-16-9">
+                    <iframe src="https://www.youtube.com/embed/jjHiPcroIPg?si=XGKI6zLPkb2OV_O2" title="video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                
+                <figure class="aspect-ratio aspect-ratio-16-9">
+                    <iframe src="https://www.youtube.com/embed/jjHiPcroIPg?si=XGKI6zLPkb2OV_O2" title="video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <h3>Audio</h3>
+                <p>
+                    Même principe que pour la vidéo, généralement les sites de partage propose des lecteurs intégré déjà adaptatif.
+                </p>
+                <h4>Bandcamp</h4>
+                <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4270514739/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://weswaltz.bandcamp.com/album/the-blackburn-sessions">The Blackburn Sessions de Wes Waltz</a></iframe>
+                <h4>Spotify</h4>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/2iiHXmqz7N9seX62wjTPxu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </article>
         </section>
     </main>

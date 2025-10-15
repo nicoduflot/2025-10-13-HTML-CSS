@@ -40,3 +40,57 @@
 video{
     background-color: black;
 }
+
+.media{
+    height: 0;
+    position: relative;
+    margin-left: none;
+    margin-right: none;
+}
+
+.media > *{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ratio-16-9{
+    padding-bottom: 56.25%;
+}
+
+.ratio-4-3{
+    padding-bottom: 75%;
+}
+
+.ratio-21-29{
+    padding-bottom: 138%;
+}
+
+.ratio-29-21{
+    padding-bottom: 72.4%;
+}
+
+/* il est possible de respecter le ratio en utilisant la propriété CSS aspect-ratio */
+
+.aspect-ratio{
+    width: auto;
+}
+
+.aspect-ratio > *{
+    width: 100%;
+    height: 100%;
+}
+
+.aspect-ratio-16-9{
+    aspect-ratio: 16/9;
+}
+
+.aspect-ratio-21-29{
+    aspect-ratio: 21/29;
+}
+
+.aspect-ratio-29-21{
+    aspect-ratio: 29/21;
+}
