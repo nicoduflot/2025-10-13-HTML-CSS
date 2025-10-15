@@ -28,7 +28,7 @@
                 <ul>
                     <li><a href="#les-images">Les images</a></li>
                     <li><a href="#audio">L'audio</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="#iframe">L'iframe</a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
@@ -137,6 +137,36 @@
                     "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour
                     l'élément vidéo.
                 </p>
+            </article>
+            <article>
+                <header>
+                    <h2 id="iframe">L'iframe</h2>
+                </header>
+                <p>
+                    L'iframe avait un ancètre, la combinaison frameset et frame
+                </p>
+                <img src="./support/008-frames-frameset.png" class="img-fluid" />
+                <p>
+                    L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible
+                    d'inserrer d'autres types de fichiers, par exemple des pdf ou directement des fichiers vidéos, sons,
+                    etc.
+                </p>
+                <p>
+                    L'iframe permet aussi d'afficher des ressources à l'intérieur depuis la page qui la contient
+                </p>
+                <img src="./support/009-iframe.png" class="img-fluid" />
+                <ul>
+                    <li><a href="./documents/PP3.pdf" target="documents">PP3</a></li>
+                    <li><a href="./documents/books.xml" target="documents">Books</a></li>
+                    <li><a href="./documents/fichier.txt" target="documents">fichier txt</a></li>
+                    <li><a href="./media/audio/diablo_town.mp3" target="documents">Diablo</a></li>
+                    <li><a href="./media/video/Fallout-4-Launch-Trailer.mp4" target="documents">Fallout</a></li>
+                </ul>
+                <iframe src="./exercice.html" width="100%" height="300px" name="documents">
+                    <p>
+                        Votre naigateur ne supporte pas les cadres de pages (iframe)
+                    </p>
+                </iframe>
             </article>
         </section>
     </main>

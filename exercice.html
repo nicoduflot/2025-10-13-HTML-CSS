@@ -4,18 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <style>
+        :root{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+
+        body > * > *{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .site-title{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header role="banner">
-        <div>Formation HTML CSS RWD</div>
+        <div class="site-title">Formation HTML CSS RWD</div>
     </header>
     <nav role="navigation">
         <ul>
-            <li><a href="./" title="Introduction au HTML - CSS">Introduction</a></li>
-            <li><a href="./media.html" title="Ajouter des media dans une page">Media</a></li>
-            <li><a href="./contact.html" title="Ajouter un formulaire dans une page">Contact</a></li>
-            <li><a href="./exercice.html" title="Mise en pratique des concepts">Exo</a></li>
-            <li><a href="./pages/toto.html" title="toto">toto</a></li>
+            <li><a href="./" title="Introduction au HTML - CSS" target="_top">Introduction</a></li>
+            <li><a href="./media.html" title="Ajouter des media dans une page" target="_top">Media</a></li>
+            <li><a href="./contact.html" title="Ajouter un formulaire dans une page" target="_top">Contact</a></li>
+            <li><a href="./exercice.html" title="Mise en pratique des concepts" target="_top">Exo</a></li>
+            <li><a href="./pages/toto.html" title="toto" target="_top">toto</a></li>
         </ul>
     </nav>
     <main>
@@ -27,12 +51,8 @@
             <p>
                 Reproduire dans la div class mise-en-page les modèles suivants : 
             </p>
-            <img src="./support/06-exo-01.png" style="max-width: 100%;" />
+            <img src="./support/006-exo-01.png" style="max-width: 100%;" />
             <style>
-                body{
-                    box-sizing: border-box;
-                }
-
                 .mise-en-page{
                     padding: 0.5rem;
                     display: grid;
@@ -104,6 +124,35 @@
 
                 </div>
             </div>
+        </article>
+        <article>
+            <header>
+                <h2>Exercice media</h2>
+            </header>
+            <style>
+                .player button{
+                    font-size: 2rem;
+                }
+            </style>
+            <p>
+                Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées
+                "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour
+                l'élément vidéo.
+            </p>
+            <figure class="player">
+                <video id="bunny" muted controls style="max-width: 100%;">
+                    <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                </video>
+                <figcaption>
+                    <button onclick="playMedia('bunny')" class="play"><i class="bi bi-play-btn-fill"></i></button>
+                    <button onclick="pauseMedia('bunny')" class="pause"><i class="bi bi-pause-btn-fill"></i></button>
+                    <script>
+                        function playMedia(idCible){(document.getElementById(idCible).play());}
+                        function pauseMedia(idCible){(document.getElementById(idCible).pause());}
+                    </script>
+                </figcaption>
+            </figure>
         </article>
     </main>
     <footer>
