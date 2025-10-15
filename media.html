@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
+    <title>Les media | Formation HTML CSS RWD</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body id="top">
@@ -20,6 +20,21 @@
         </ul>
     </nav>
     <main>
+        <header>
+            <h1>Les media</h1>
+        </header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#les-images">Les images</a></li>
+                    <li><a href="#audio">L'audio</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </aside>
         <section>
             <article>
                 <header>
@@ -59,6 +74,68 @@
                 <p>
                     La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le
                     référencement.
+                </p>
+                <h3>Picture</h3>
+                <p>
+                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                    autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                </p>
+                <figure>
+                    <picture>
+                        <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                        <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                        <img loading="lazy" src="./images/doc-signal-200w.png" class="img-fluid" alt="protrait d'un personnage de film dans le style Synthwave" />
+                    </picture>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2 id="audio">L'audio</h2>
+                </header>
+                <p>
+                    Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                    Cette balise peut soit appeler un seul fichier, ou utiliser aussi la balise source.
+                    Utiliser plusieurs sources permet de s'adapter à la configuration de l'utilisateur. Un appareil,
+                    pour lire un fichier audio (ou vidéo) doit posséder les bon codecs. Si je met a disposition un fichier
+                    avec une extension que l'appareil ne connaît pas, j'aurais une erreur.
+                    Si je propose le même son dans des formats différents avec source, l'appareil lancera le premier
+                    fichier qu'il est capable de lire.
+                </p>
+                <figure class="player">
+                    <audio controls id="diablo">
+                        <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <figcaption>
+                        <button onclick="playMedia('diablo')" class="play"><i class="bi bi-play-btn-fill"></i></button>
+                        <button onclick="pauseMedia('diablo')" class="pause"><i class="bi bi-pause-btn-fill"></i></button>
+                    </figcaption>
+                    <script>
+                        function playMedia(idCible){(document.getElementById(idCible).play());}
+                        function pauseMedia(idCible){(document.getElementById(idCible).pause());}
+                    </script>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h2 id="video">L'élément vidéo</h2>
+                </header>
+                <p>
+                    La balise video se comporte comme la balise audio
+                </p>
+                <figure class="player">
+                    <video id="fallout" src="./media/video/Fallout-4-Launch-Trailer.mp4" muted class="img-fluid" controls>
+                    </video>
+                    <!-- poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" -->
+                    <figcaption>
+                        <button onclick="playMedia('fallout')" class="play"><i class="bi bi-play-btn-fill"></i></button>
+                        <button onclick="pauseMedia('fallout')" class="pause"><i class="bi bi-pause-btn-fill"></i></button>
+                    </figcaption>
+                </figure>
+                <p>
+                    Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées
+                    "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour
+                    l'élément vidéo.
                 </p>
             </article>
         </section>
