@@ -1,0 +1,34 @@
+.left{
+    float: left;
+    margin: var(--element-gap) var(--element-gap) var(--element-gap) 0;
+}
+
+.clear{
+    clear: both;
+}
+
+/* css adaptatif pour les images */
+
+.img-fluid{
+    max-width: 100%;
+}
+
+.vignette-100{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.avatar-100{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.ellipse{
+    border-radius: 50%;
+    max-width: 200px;
+}

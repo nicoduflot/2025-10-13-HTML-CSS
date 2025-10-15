@@ -35,7 +35,30 @@
                     sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
                 </p>
                 <p>
-                    Une image peut-être appelée dans un paragraphe 
+                    Une image peut-être appelée dans un paragraphe : <img src="./images/james-white-composite-400w.png" alt="Image composée de 9 miniatures représentant des illustration dans le style synthwave par le designer James White" class="left img-fluid" />, elle est intégrée dans le flux du texte.
+                </p>
+                <p class="clear">
+                    Il est possible d'imposer une largeur et une hauteur à une image, mais il faudra utiliser une classe css dans laquelle on précise que l'objet (ici le flux de l'image) "couvre" l'espace proposé.
+                </p>
+                <img src="./support/007-object-fit.png" class="img-fluid" /><br />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="vignette-100" /><br />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="avatar-100" /><br />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="ellipse img-fluid" /><br />
+                <h3>Figure</h3>
+                <p>
+                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et
+                    l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une
+                    légende, avec la balise figcaption.
+                </p>
+                <figure>
+                    <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="img-fluid" alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave" />
+                    <figcaption>
+                        Illustration pour une pochette d'album de music synthwave, créée par le designer James White
+                    </figcaption>
+                </figure>
+                <p>
+                    La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le
+                    référencement.
                 </p>
             </article>
         </section>
