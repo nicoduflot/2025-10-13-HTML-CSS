@@ -1,0 +1,64 @@
+fieldset{
+    border-color: #666; /* #33 33 33 */
+    border-style: solid;
+    border-width: 3px;
+    border-radius: var(--element-gap);
+    margin-bottom: var(--element-gap);
+}
+
+legend{
+    border-color: #666; /* #33 33 33 */
+    border-style: solid;
+    border-width: 3px;
+    border-radius: var(--element-gap);
+    padding-left:var(--element-gap);
+    padding-right:var(--element-gap);
+}
+
+/* gestion des input text, email, number. */
+
+input:focus,
+input:focus-visible{
+    outline-color: #a3cfbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    font-size: 1rem;
+    line-height: 1.3rem;
+    border-style: solid;
+    border-color: #666;
+    border-radius: calc( var(--element-gap) / 2);
+}
+
+select{
+    height: var(--site-line-height);
+    font-size: 1rem;
+    border-radius: calc( var(--element-gap) / 2);
+}
+
+form textarea{
+    width: 100%;
+    height: 25vh;
+}
+
+input:invalid, 
+form textarea:invalid,
+select:invalid{
+    border-color: #f1aeb5;
+}
+
+input:valid, 
+form textarea:valid,
+select:valid{
+    border-color:#a3cfbb;
+}
+
+@media screen and (min-width: 768px) {
+    form{
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
