@@ -1,0 +1,18 @@
+.translation{
+    transition: transform 0.5s;
+}
+
+
+.translation:hover{
+    transform: translate(20px, -30px);
+}
+
+.scale-border{
+    transition: transform 2s ease, border 1s;
+    border: 0px dashed transparent;
+}
+
+.scale-border:hover{
+    transform: scale(1.1);
+    border: 2px dashed red;
+}

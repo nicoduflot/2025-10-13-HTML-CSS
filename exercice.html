@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     <style>
-        :root{
+        :root {
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        *, *::before, *::after{
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
-        body{
+
+        body {
             margin: 0;
         }
 
-        body > * > *{
+        body>*>* {
             width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .site-title{
+        .site-title {
             font-size: 3rem;
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <header role="banner">
         <div class="site-title">Formation HTML CSS RWD</div>
     </header>
     <nav role="navigation">
         <ul>
-            <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
+            <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a>
+            </li>
             <li><a href="./media.html" title="Ajouter des media dans une page"><i class="bi bi-film"></i> Media</a></li>
-            <li><a href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-            <li><a href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
-            <li><a href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
+            <li><a href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i>
+                    Contact</a></li>
+            <li><a href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                    Bootstrap</a></li>
+            <li><a href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation
+                    CSS</a></li>
             <li><a href="./design.html" title="Design en CSS"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
             <li><a href="./exercice.html" title="Mise en pratique des concepts"><i class="bi bi-tools"></i> Exo</a></li>
             <li><a href="./pages/toto.html" title="toto"><i class="bi bi-person-circle"></i> toto</a></li>
@@ -52,24 +61,24 @@
         <article>
             <h2>Mise en page de blocs</h2>
             <p>
-                Reproduire dans la div class mise-en-page les modèles suivants : 
+                Reproduire dans la div class mise-en-page les modèles suivants :
             </p>
             <img src="./support/006-exo-01.png" style="max-width: 100%;" />
             <style>
-                .mise-en-page{
+                .mise-en-page {
                     padding: 0.5rem;
                     display: grid;
                     gap: 0.5rem;
                     grid-template-rows: 1fr 2fr 1fr;
                     grid-template-columns: 1fr 1fr;
-                    grid-template-areas: 
-                    'vert vert' 
-                    'rouge rouge' 
-                    'bleu orange'
+                    grid-template-areas:
+                        'vert vert'
+                        'rouge rouge'
+                        'bleu orange'
                     ;
                 }
 
-                .mise-en-page > *{
+                .mise-en-page>* {
                     min-height: 100px;
                 }
 
@@ -77,38 +86,38 @@
                 .vert,
                 .rouge,
                 .bleu,
-                .orange{
+                .orange {
                     padding: 0.5rem;
                     border: 5px solid black
                 }
 
-                .vert{
+                .vert {
                     grid-area: vert;
                     background-color: rgb(14, 165, 14);
                 }
-                
-                .rouge{
+
+                .rouge {
                     grid-area: rouge;
                     background-color: red;
                 }
-                
-                .bleu{
+
+                .bleu {
                     grid-area: bleu;
                     background-color: rgb(60, 143, 221);
                 }
-                
-                .orange{
+
+                .orange {
                     grid-area: orange;
-                    background-color:orange;
+                    background-color: orange;
                 }
 
                 @media screen and (min-width: 1000px) {
-                    .mise-en-page{
+                    .mise-en-page {
                         grid-template-columns: 1fr 4fr;
-                        grid-template-areas: 
-                        'rouge rouge' 
-                        'vert bleu' 
-                        'orange orange'
+                        grid-template-areas:
+                            'rouge rouge'
+                            'vert bleu'
+                            'orange orange'
                         ;
                     }
                 }
@@ -133,7 +142,7 @@
                 <h2>Exercice media</h2>
             </header>
             <style>
-                .player button{
+                .player button {
                     font-size: 2rem;
                 }
             </style>
@@ -151,16 +160,70 @@
                     <button onclick="playMedia('bunny')" class="play"><i class="bi bi-play-btn-fill"></i></button>
                     <button onclick="pauseMedia('bunny')" class="pause"><i class="bi bi-pause-btn-fill"></i></button>
                     <script>
-                        function playMedia(idCible){(document.getElementById(idCible).play());}
-                        function pauseMedia(idCible){(document.getElementById(idCible).pause());}
+                        function playMedia(idCible) { (document.getElementById(idCible).play()); }
+                        function pauseMedia(idCible) { (document.getElementById(idCible).pause()); }
                     </script>
                 </figcaption>
             </figure>
         </article>
         <article>
             <header>
-                <h2></h2>
+                <h2>Animation - transition</h2>
             </header>
+            <h4>Tableau de l'exercice</h4>
+            <p>
+                Agrandir les cellules du tableau de 10% au passage de la souris, la durée de l'agrandissement sera de
+                0.2 secondes (200 millisecondes)
+            </p>
+            <style>
+                /* css du tableau et de l'animation */
+                .exo-anim {
+                    border-collapse: collapse;
+                }
+
+                .exo-anim td {
+                    border: 1px solid black;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                }
+
+                .exo-anim td:hover{
+
+                }
+            </style>
+            <table class="exo-anim">
+                <tbody>
+                    <tr>
+                        <td colspan="2">1 - 1</td>
+                        <td>1 - 2</td>
+                        <td>1 - 3</td>
+                        <td>1 - 4</td>
+                        <!-- <td>1 - 5</td> -->
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2 - 1</td>
+                        <td>2 - 2</td>
+                        <td>2 - 3</td>
+                        <td>2 - 4</td>
+                        <td>2 - 5</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">3 - 1</td>
+                        <td>3 - 2</td>
+                        <td>3 - 3</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">4 - 1</td>
+                        <td>4 - 2</td>
+                        <td>4 - 3</td>
+                    </tr>
+                    <tr>
+                        <td>5 - 1</td>
+                        <td>5 - 2</td>
+                        <td>5 - 3</td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
     </main>
     <footer>
@@ -169,4 +232,5 @@
         </div>
     </footer>
 </body>
+
 </html>

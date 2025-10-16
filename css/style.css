@@ -5,6 +5,8 @@
 @import url('./LazenbyCompSmooth.css');
 @import url('./media.css');
 @import url('./contact.css');
+@import url('./animate.css');
+@import url('./animation.css');
 
 /*
 Unités de tailles en CSS (en web)
@@ -210,6 +212,7 @@ body > header a,
 body > nav[role="navigation"] a,
 body > footer a{
     color: var(--nav-link-color);
+    transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 body > nav[role="navigation"] a:hover,

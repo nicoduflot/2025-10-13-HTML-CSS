@@ -23,11 +23,61 @@
         </ul>
     </nav>
     <main>
+        <header>
+            <h1>Les Animations en CSS</h1>
+        </header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#animation-ready-made">Les animations "ready-made"</a></li>
+                </ul>
+            </nav>
+        </aside>
         <section>
             <article>
                 <header>
-                    <h1>Les Animations en CSS</h1>
+                    <h2 id="animation-ready-made" class="animate__animated  animate__bounce animate__infinite">Le "ready-made"</h2>
                 </header>
+                <p>
+                    Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
+                </p>
+                <p>
+                    <button id="animation">Faire bouger le paragraphe suivante</button>
+                </p>
+                <p id="animation-cible">
+                    Coucou !
+                </p>
+                <script>
+                    const buttonAnime = document.getElementById('animation');
+                    const animationCible = document.getElementById('animation-cible');
+                    buttonAnime.addEventListener('click', function(){
+                        animationCible.classList.add('animate__animated', 'animate__bounce', 'animate__infinite', 'animate__repeat-1');
+                        animationCible.addEventListener('animationend', function(){
+                            this.classList.remove('animate__animated', 'animate__bounce', 'animate__infinite', 'animate__repeat-1');
+                        });
+                    });
+                </script>
+            </article>
+            <article>
+                <header>
+                    <h2 id="animation-diy">Animation D.I.Y.</h2>
+                </header>
+                <h3>Les transitions</h3>
+                <p class="translation">
+                    Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
+                </p>
+                <p class="scale-border">
+                    Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transition et / ou transformations.
+                </p>
+                <p>
+                    on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                </p>
+                <ul>
+                    <li>transition-property: la propriété CSS subissant la transition</li>
+                    <li>transition-duration: la durée de la transition en seconde</li>
+                    <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)</li>
+                    <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                </ul>
             </article>
         </section>
     </main>
