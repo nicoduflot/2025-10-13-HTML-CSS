@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/bs-custom.css" media="all" />
     <script src="./js/bootstrap.bundle.js"></script>
 </head>
+
 <body id="top" data-bs-theme="light">
     <header role="banner">
         <div class="h1 container">Formation HTML CSS RWD</div>
@@ -16,23 +18,32 @@
     <nav role="navigation">
         <div class="container">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link" href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
-                <li class="nav-item"><a class="nav-link" href="./media.html" title="Ajouter des media dans une page"><i class="bi bi-film"></i> Media</a></li>
-                <li class="nav-item"><a class="nav-link" href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-                <li class="nav-item"><a class="nav-link active" href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
-                <li class="nav-item"><a class="nav-link" href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
-                <li class="nav-item"><a class="nav-link" href="./design.html" title="Design en CSS"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
-                <li class="nav-item"><a class="nav-link" href="./exercice.html" title="Mise en pratique des concepts"><i class="bi bi-tools"></i> Exo</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/toto.html" title="toto"><i class="bi bi-person-circle"></i> toto</a></li>
+                <li class="nav-item"><a class="nav-link" href="./" title="Introduction au HTML - CSS"><i
+                            class="bi bi-house-door-fill"></i> Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="./media.html" title="Ajouter des media dans une page"><i
+                            class="bi bi-film"></i> Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html"
+                        title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./bootstrap.html"
+                        title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./animations.html" title="Animation en CSS"><i
+                            class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="./design.html" title="Design en CSS"><i
+                            class="bi bi-brush-fill"></i> Design CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="./exercice.html" title="Mise en pratique des concepts"><i
+                            class="bi bi-tools"></i> Exo</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/toto.html" title="toto"><i
+                            class="bi bi-person-circle"></i> toto</a></li>
                 <li class="nav-item">
-                    <button class="btn-sm btn-secondary m-1" id="switchMode" onclick="switchMode('top')">Darkmode</button>
+                    <button class="btn-sm btn-secondary m-1" id="switchMode"
+                        onclick="switchMode('top')">Darkmode</button>
                 </li>
             </ul>
             <script>
-                function switchMode(cible){
+                function switchMode(cible) {
                     let mode = document.getElementById(cible).dataset.bsTheme;
                     console.log(mode);
-                    document.getElementById(cible).dataset.bsTheme = (mode === 'light')? 'dark' : 'light';
+                    document.getElementById(cible).dataset.bsTheme = (mode === 'light') ? 'dark' : 'light';
                 }
             </script>
         </div>
@@ -53,9 +64,9 @@
                 </ul>
             </nav>
         </aside>
-        <section>
+        <section class="row">
             <!-- Partie HTML -->
-            <article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <header>
                     <h2 id="balises-html-de-contenu-de-texte">Balises HTML de contenu de texte</h2>
                 </header>
@@ -101,6 +112,8 @@
                     </li>
                     <li>élément de liste</li>
                 </ul>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <h4>Les listes ordonnées</h4>
                 <h5>Les listes à un seul niveau</h5>
                 <ol>
@@ -142,33 +155,36 @@
                     J'interromps une liste par un paragraphe et je la reprends ensuite
                 </p>
                 <ol start="6">
-                    <li>élément de liste</li>                    
-                    <li>élément de liste</li>                    
-                    <li>élément de liste</li>                    
-                    <li>élément de liste</li>                    
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
                 </ol>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <h3>Les listes "descriptives"</h3>
                 <dl>
                     <dt>terme de l'élément à décrire</dt>
                     <dd>Description de l'élément cité en étiquette</dd>
-                    
+
                     <dt>second terme de l'élément à décrire</dt>
                     <dd>Description du second élément cité en étiquette</dd>
                 </dl>
                 <dl>
                     <dt>Paris</dt>
                     <dd>Capitale de la France</dd>
-                    
+
                     <dt>Marseille</dt>
                     <dd>Le soleil c'est cool</dd>
-                    
+
                     <dt>Lille</dt>
                     <dd>"les gens ont dans leurs yeux le bleu qui manque à leur décors"</dd>
                 </dl>
-                <h3>Les blocs de citaction</h3>
+                <h3>Les blocs de citation</h3>
                 <blockquote>
                     <p>
-                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges extérieurs à gauche et à droite.
+                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges
+                        extérieurs à gauche et à droite.
                     </p>
                 </blockquote>
                 <p>
@@ -176,12 +192,17 @@
                 </p>
                 <blockquote>
                     <p>
-                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                            deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                            outils de la communication.</q>
                     </p>
                     <p>
-                        <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997  (ISBN 2-84172-045-4), p. 173</cite>
+                        <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN
+                            2-84172-045-4), p. 173</cite>
                     </p>
                 </blockquote>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <h3>Les tableaux</h3>
                 <img src="./support/003-tableau-html.png" style="max-width: 100%;" />
                 <div class="table-rwd">
@@ -285,33 +306,42 @@
                     </table>
                 </div>
             </article>
-            <article>
+            <article class="col">
                 <header>
                     <h2 id="balises-html-de-modification-du-texte">Balises HTML de modification du texte</h2>
                 </header>
                 <h3>Taille, police et la couleur du texte</h3>
                 <p>
                     Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait
-                    de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une section de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre de manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
+                    de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une section
+                        de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre de
+                    manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
                     au besoin des section de texte.
                 </p>
                 <style>
-                    .danger{
+                    .danger {
                         color: red;
                         font-family: Impact;
                         font-size: 18px;
                     }
                 </style>
                 <p>
-                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer <span class="danger">l'apparence du texte</span>.
+                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer
+                    <span class="danger">l'apparence du texte</span>.
                 </p>
                 <p>
-                    <code>&lt;span&gt;</code> ne sert qu'à faire ressortir visuellement du texte, pour avoir un impact sur le référencement, il existe d'autre balises.
+                    <code>&lt;span&gt;</code> ne sert qu'à faire ressortir visuellement du texte, pour avoir un impact
+                    sur le référencement, il existe d'autre balises.
                 </p>
                 <h3>Le gras et l'italique</h3>
                 <p>
-                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui ne servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour l'italique</i>.<br />
-                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le référencement, on utilisera &lt;strong&gt; <strong>pour le gras</strong> et l'importance sémantique sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique du terme.
+                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui ne
+                    servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour
+                        l'italique</i>.<br />
+                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
+                    référencement, on utilisera &lt;strong&gt; <strong>pour le gras</strong> et l'importance sémantique
+                    sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique
+                    du terme.
                 </p>
                 <h3>D'autres mise en forme de texte</h3>
                 <p>
@@ -328,9 +358,9 @@
                 </p>
             </article>
         </section>
-        <section>
+        <section class="row">
             <!-- Partie CSS -->
-             <article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <header>
                     <h2 id="mise-a-zero-du-css">Mise à zéro du CSS</h2>
                 </header>
@@ -353,7 +383,7 @@
                 </p>
                 <div style="font-size: 2em;border: 1px solid black;padding: 0.5rem;">
                     2em
-                    <div  style="font-size: 2em;border: 1px solid black;padding: 0.5rem;">
+                    <div style="font-size: 2em;border: 1px solid black;padding: 0.5rem;">
                         2em
                     </div>
                 </div>
@@ -362,12 +392,12 @@
                 </p>
                 <div style="font-size: 2rem;border: 1px solid black;padding: 0.5rem;">
                     2rem
-                    <div  style="font-size: 2rem;border: 1px solid black;padding: 0.5rem;">
+                    <div style="font-size: 2rem;border: 1px solid black;padding: 0.5rem;">
                         2rem
                     </div>
                 </div>
-             </article>
-             <article>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <header>
                     <h2 id="dimensions-web-et-css">Dimensions web et CSS</h2>
                 </header>
@@ -381,13 +411,17 @@
                     le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
                 </p>
                 <img src="./support/002-content-or-border-box-sizing-html.png" style="max-width: 100%;" />
-                <div style="box-sizing: content-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;"></div>
-                <div style="box-sizing: border-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;"></div>
+                <div
+                    style="box-sizing: content-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;">
+                </div>
+                <div
+                    style="box-sizing: border-box; width: 200px;height: 200px; padding: 10px; border: 1px solid black;">
+                </div>
                 <p class="toto">
-                   coucou<br />T'es là ?
+                    coucou<br />T'es là ?
                 </p>
-             </article>
-             <article>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <header>
                     <h2 id="les-positions-en-css">Les positions en CSS</h2>
                 </header>
@@ -408,7 +442,8 @@
                     </li>
                     <li>
                         absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
-                        "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son  ancètre le plus proche ayant la position relative.
+                        "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son ancètre le plus
+                        proche ayant la position relative.
                     </li>
                     <li>
                         fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
@@ -421,26 +456,29 @@
                         en haut du viewport avec le décalage indiqué par rapport à son élément parent.
                     </li>
                     <style>
-                        .exemple-position{
+                        .exemple-position {
                             width: 200px;
                             height: 200px;
                             border-width: 3px;
                             border-style: solid;
                             border-color: black;
                         }
+
                         /*
                         Le D.R.Y. ou "Dont Repeat Yourself" est une façon d'écrire du CSS (ou du code) pour éviter de répéter des déclarations semblables appliqué à divers classes ou éléments
                         */
-                        .carre-ex{
+                        .carre-ex {
                             width: 50px;
                             height: 50px;
                             opacity: 0.5;
                         }
-                        .carre-rouge{
+
+                        .carre-rouge {
                             background-color: darkred;
                             position: relative;
                         }
-                        .carre-vert{
+
+                        .carre-vert {
                             background-color: darkgreen;
                         }
                     </style>
@@ -449,44 +487,64 @@
                         <div class="carre-ex carre-vert"></div>
                     </div>
                 </ul>
-             </article>
-             <article>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <header>
                     <h2 id="le-css-adaptatif">Le CSS adaptatif</h2>
                 </header>
                 <p>
-                    Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter l'affichage d'un site sur selon l'appareil utilisé.
+                    Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter
+                    l'affichage d'un site sur selon l'appareil utilisé.
                 </p>
                 <p>
-                    Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands (tablette ou PC)
+                    Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et
+                    l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands
+                    (tablette ou PC)
                 </p>
                 <p>
-                    Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la largeur de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
+                    Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la largeur
+                    de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
                 </p>
                 <h3>Les media-queries</h3>
                 <p>
-                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre autres, à l'affichage du site sur l'appareil : largeur d'affichage  (viewport), l'orientation (portrait ou paysage), etc.
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                    autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation
+                    (portrait ou paysage), etc.
                 </p>
                 <p>
-                    Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de site naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné uniquement à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les surcharges ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS total.
+                    Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de site
+                    naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné uniquement
+                    à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les surcharges
+                    ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS total.
                 </p>
                 <p>
-                    Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge de CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très difficile à maintenir.
+                    Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge de
+                    CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très
+                    difficile à maintenir.
                 </p>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <h3>la propriété display</h3>
                 <p>
-                    La propriété display permet de contrôler le mode d'affichage d'un élément sur la page et parfois même au sein d'un "flux" de texte, généralement dans un paragraphe.
+                    La propriété display permet de contrôler le mode d'affichage d'un élément sur la page et parfois
+                    même au sein d'un "flux" de texte, généralement dans un paragraphe.
                 </p>
                 <p>
-                    Les valeurs possibles (liste non exhaustive) : 
+                    Les valeurs possibles (liste non exhaustive) :
                 </p>
                 <ul>
-                    <li>block : l'élément prend toute la largeur disponible et "repousse" les éléments (ou le flux dee données) au dessus (pour ce qui arrive avant) et en dessous (pour ce qui arrive après)</li>
-                    <li>inline : l'élément prend la largeur de son contenur et est intégré ans le flux de texte à la suite</li>
-                    <li>inline-block : completement semblable au inline, mais généralement utilisé sur des éléments ayant la proriété float d'activée, afin de les aligner côte à côte</li>
+                    <li>block : l'élément prend toute la largeur disponible et "repousse" les éléments (ou le flux dee
+                        données) au dessus (pour ce qui arrive avant) et en dessous (pour ce qui arrive après)</li>
+                    <li>inline : l'élément prend la largeur de son contenur et est intégré ans le flux de texte à la
+                        suite</li>
+                    <li>inline-block : completement semblable au inline, mais généralement utilisé sur des éléments
+                        ayant la proriété float d'activée, afin de les aligner côte à côte</li>
                     <li>None : l'élément n'est tout simplement pas affiché à l'écran</li>
-                    <li>flex : permet d'utiliser les propriétés flexible CSS (principalement utilisées pour le CSS adaptatif) MAIS pour les élément &Agrave; l'intérieur</li>
-                    <li>grid : permet de configurer une disposition en grille, en configurant le nombre et l'espace pris par les colonne, la gestion automatique ou forcée des lignes, et l'espace a prévoir entre les éléments</li>
+                    <li>flex : permet d'utiliser les propriétés flexible CSS (principalement utilisées pour le CSS
+                        adaptatif) MAIS pour les élément &Agrave; l'intérieur</li>
+                    <li>grid : permet de configurer une disposition en grille, en configurant le nombre et l'espace pris
+                        par les colonne, la gestion automatique ou forcée des lignes, et l'espace a prévoir entre les
+                        éléments</li>
                 </ul>
                 <h4>float</h4>
                 <div style="border: 1px solid darkred;">
@@ -499,34 +557,175 @@
                     <div style="clear: both;"></div>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni ipsam incidunt ratione tempora sunt sit officiis odit! Explicabo vel consectetur illo recusandae! Ex, ipsa incidunt tempora totam nam cum at.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni ipsam incidunt ratione tempora sunt
+                    sit officiis odit! Explicabo vel consectetur illo recusandae! Ex, ipsa incidunt tempora totam nam
+                    cum at.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus officiis, voluptatum, doloribus nihil aliquid laudantium facere sed adipisci dicta iste, magni ratione? Obcaecati suscipit voluptatibus a molestiae consectetur maxime.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus officiis, voluptatum,
+                    doloribus nihil aliquid laudantium facere sed adipisci dicta iste, magni ratione? Obcaecati suscipit
+                    voluptatibus a molestiae consectetur maxime.
                 </p>
-                <img src="./images/y-so-serious-white.png" style="border:1px solid #000; background-size: cover; float: left;" width="200" />
+                <img src="./images/y-so-serious-white.png"
+                    style="border:1px solid #000; background-size: cover; float: left;" width="200" />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorum dolor sapiente aperiam quibusdam, nemo animi beatae distinctio similique magnam quod molestias nam nisi harum voluptas sequi sed repellendus esse.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorum dolor sapiente aperiam
+                    quibusdam, nemo animi beatae distinctio similique magnam quod molestias nam nisi harum voluptas
+                    sequi sed repellendus esse.
                 </p>
                 <div style="clear: both;"></div>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
                 <h4>Display block, inline, inline-block dans un flux</h4>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur <span style="display: inline;"><b>adipisicing elit</b></span>. Culpa laborum, ipsam eligendi <span style="display: block;"><b>adipisci illum</b></span> voluptas natus suscipit porro voluptatem! Temporibus saepe vel deleniti similique earum quidem, veritatis doloremque cupiditate minima! Lorem, ipsum dolor sit amet consectetur <span style="display: inline-block;"><b>adipisicing elit</b></span>. Non aliquam, ea molestiae quae assumenda dolor dolores incidunt quaerat voluptates. Ab, dolore debitis! Expedita hic atque rerum possimus quia maxime ullam.
+                    Lorem ipsum dolor sit amet consectetur <span style="display: inline;"><b>adipisicing
+                            elit</b></span>. Culpa laborum, ipsam eligendi <span style="display: block;"><b>adipisci
+                            illum</b></span> voluptas natus suscipit porro voluptatem! Temporibus saepe vel deleniti
+                    similique earum quidem, veritatis doloremque cupiditate minima! Lorem, ipsum dolor sit amet
+                    consectetur <span style="display: inline-block;"><b>adipisicing elit</b></span>. Non aliquam, ea
+                    molestiae quae assumenda dolor dolores incidunt quaerat voluptates. Ab, dolore debitis! Expedita hic
+                    atque rerum possimus quia maxime ullam.
                 </p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item’s accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It’s also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item’s accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It’s also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It’s also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Accordion Item #4
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It’s also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        aria-controls="exampleModal" aria-label="Ouvrir une modale">
+                        Launch demo modal
+                    </button>
+                </p>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner ratio ratio-16x9">
+                        <figure class="carousel-item active bg-dark">
+                            <img src="./images/doc-signal-200w.png" class="d-block img-fluid" alt="...">
+                        </figure>
+                        <figure class="carousel-item bg-dark">
+                            <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="d-block img-fluid" alt="...">
+                        </figure>
+                        <figure class="carousel-item bg-dark">
+                            <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="d-block img-fluid" alt="...">
+                        </figure>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </article>
+            <article class="col">
                 <h4>Display : flex</h4>
-                
+
                 <style>
-                    .exemple-display-flex{
+                    .exemple-display-flex {
                         border: 1px solid black;
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content:flex-start;
-                        --gap-display-flex : 0.5rem;
+                        justify-content: flex-start;
+                        --gap-display-flex: 0.5rem;
                         padding-bottom: var(--gap-display-flex);
                         padding-left: var(--gap-display-flex);
                     }
 
-                    .div-flex{
+                    .div-flex {
                         border: 1px solid black;
                         width: 100%;
                         margin-top: var(--gap-display-flex);
@@ -534,28 +733,28 @@
                     }
 
                     @media screen and (min-width: 700px) {
-                        .div-flex{
-                           width: calc( 50% - var(--gap-display-flex) );
+                        .div-flex {
+                            width: calc(50% - var(--gap-display-flex));
                         }
                     }
-                    
+
                     @media screen and (min-width: 1000px) {
-                        .div-flex{
-                            width: calc( ( 100% / 3 ) - var(--gap-display-flex) );
+                        .div-flex {
+                            width: calc((100% / 3) - var(--gap-display-flex));
                         }
 
-                        .flex-col-2{
-                            width: calc( (( 100% / 3 ) * 2) -  var(--gap-display-flex));
+                        .flex-col-2 {
+                            width: calc(((100% / 3) * 2) - var(--gap-display-flex));
                         }
                     }
-                    
+
                     @media screen and (min-width: 1200px) {
-                        .div-flex{
-                           width: calc( ( 100% / 4 ) - var(--gap-display-flex) );
+                        .div-flex {
+                            width: calc((100% / 4) - var(--gap-display-flex));
                         }
 
-                        .flex-col-2{
-                            width: calc( (( 100% / 4 ) * 2) -  var(--gap-display-flex));
+                        .flex-col-2 {
+                            width: calc(((100% / 4) * 2) - var(--gap-display-flex));
                         }
                     }
                 </style>
@@ -565,7 +764,9 @@
                             toto-01
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta, fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident reiciendis iure nemo accusantium officia dolores?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta,
+                            fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident
+                            reiciendis iure nemo accusantium officia dolores?
                         </p>
                     </div>
                     <div class="div-flex">toto-02</div>
@@ -583,9 +784,9 @@
                     <div class="div-flex">toto-14</div>
                 </div>
                 <h4>Display : grid</h4>
-                <img src="./support/005-grille-ligne-colonnes-aires.png" style="max-width: 100%;" />
+                <img src="./support/005-grille-ligne-colonnes-aires.png" class="img-fluid" />
                 <style>
-                    .exemple-display-grid{
+                    .exemple-display-grid {
                         border: 1px solid black;
                         display: grid;
                         gap: 0.5rem;
@@ -593,36 +794,36 @@
                         grid-template-columns: 1fr;
                     }
 
-                    .div-grid{
+                    .div-grid {
                         border: 1px solid black;
                     }
 
-                     @media screen and (min-width: 700px) {
-                        .exemple-display-grid{
+                    @media screen and (min-width: 700px) {
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr;
                         }
                     }
-                    
+
                     @media screen and (min-width: 1000px) {
-                        .exemple-display-grid{
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr 1fr;
                         }
 
-                        .grid-col-2{
+                        .grid-col-2 {
                             grid-column: span 2;
                         }
 
-                        .grid-row-2{
+                        .grid-row-2 {
                             grid-row: span 2;
                         }
                     }
-                    
+
                     @media screen and (min-width: 1200px) {
-                        .exemple-display-grid{
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr 1fr 1fr;
                         }
 
-                        .grid-col-1{
+                        .grid-col-1 {
                             grid-column: span 1;
                         }
                     }
@@ -633,7 +834,9 @@
                             toto-01
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta, fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident reiciendis iure nemo accusantium officia dolores?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat fugiat, quasi dicta,
+                            fuga delectus harum, excepturi laudantium a dolorem magnam molestiae perspiciatis provident
+                            reiciendis iure nemo accusantium officia dolores?
                         </p>
                     </div>
                     <div class="div-grid">toto-02</div>
@@ -652,22 +855,23 @@
                 </div>
                 <h5>grid-template-areas</h5>
                 <p>
-                    Référencer les colonne et les lignes de la grille à des aires dans lequelles les éléments seront placés
+                    Référencer les colonne et les lignes de la grille à des aires dans lequelles les éléments seront
+                    placés
                 </p>
                 <style>
-                    .exemple-areas, 
-                    .exemple-areas > *{
+                    .exemple-areas,
+                    .exemple-areas>* {
                         border: 1px solid black;
                     }
 
-                    .exemple-areas{
+                    .exemple-areas {
                         display: grid;
                         grid-template-columns: 250px auto;
-                        grid-template-areas: 
-                        'header-areas header-areas' 
-                        'header-main header-main' 
-                        'header-col header-col' 
-                        'header-footer header-footer' 
+                        grid-template-areas:
+                            'header-areas header-areas'
+                            'header-main header-main'
+                            'header-col header-col'
+                            'header-footer header-footer'
                         ;
                         margin-bottom: 1rem;
                         row-gap: 0.5rem;
@@ -675,31 +879,31 @@
                         padding: 0.5rem;
                     }
 
-                    .header-areas{
+                    .header-areas {
                         grid-area: header-areas;
                     }
-                    
-                    .header-main{
+
+                    .header-main {
                         grid-area: header-main;
                     }
-                    
-                    .header-col{
+
+                    .header-col {
                         grid-area: header-col;
                     }
-                    
-                    .header-footer{
+
+                    .header-footer {
                         grid-area: header-footer;
                     }
 
-                     @media screen and (min-width: 1000px) {
-                        .exemple-areas{
-                            grid-template-areas: 
-                            'header-areas header-areas' 
-                            'header-col header-main' 
-                            'header-footer header-footer' 
-                        ;
+                    @media screen and (min-width: 1000px) {
+                        .exemple-areas {
+                            grid-template-areas:
+                                'header-areas header-areas'
+                                'header-col header-main'
+                                'header-footer header-footer'
+                            ;
                         }
-                     }
+                    }
                 </style>
                 <div class="exemple-areas">
                     <div class="header-areas">header</div>
@@ -707,7 +911,7 @@
                     <div class="header-col">col</div>
                     <div class="header-footer">footer</div>
                 </div>
-             </article>
+            </article>
         </section>
     </main>
     <footer>
@@ -721,4 +925,5 @@
         </nav>
     </aside>
 </body>
+
 </html>
