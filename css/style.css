@@ -220,6 +220,10 @@ body > nav[role="navigation"] a:focus{
     outline: none;
 }
 
+main > section > *{
+    width: 100%;
+}
+
 /* déclaration des media queries */
 
 @media print{
@@ -273,6 +277,28 @@ body > nav[role="navigation"] a:focus{
     body > footer > *{
         width: 960px;
     }
+
+    main > section{
+        display: flex;
+        flex-wrap: wrap;
+        /*padding: var(--element-gap);*/
+        /*gap: var(--element-gap);*/
+    }
+
+    main > section > *{
+        width: calc( 50% - ( var(--element-gap) / 2));
+        margin-right: var(--element-gap);
+    }
+
+    main > section > *:nth-child(even){
+        margin-right: 0;
+    }
+
+    main > section > *:nth-child(odd):last-child{
+         width: calc( 100% - ( var(--element-gap) / 2));
+         margin-right: 0;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -281,6 +307,30 @@ body > nav[role="navigation"] a:focus{
     main,
     body > footer > *{
         width: 1140px;
+    }
+
+    main > section > *:nth-child(odd):last-child{
+         width: calc( 33%  - ( var(--element-gap) / 2));
+         margin-right: var(--element-gap)!important;
+    }
+    
+    main > section > *{
+        width: calc( 33%  - ( var(--element-gap) / 2));
+        margin-right: var(--element-gap)!important;
+    }
+
+    main > section > *:nth-child(3n){
+        margin-right: 0!important;
+    }
+
+    main > section > *:nth-child(3n + 1):last-child{
+         width: calc( 100%  - ( var(--element-gap) / 2));
+         margin-right: var(--element-gap)!important;
+    }
+
+    main > section > *:nth-child(3n + 2):last-child{
+         width: calc( 65%  - ( var(--element-gap) / 2));
+         margin-right: var(--element-gap)!important;
     }
 }
 
@@ -291,4 +341,25 @@ body > nav[role="navigation"] a:focus{
     body > footer > *{
         width: 1320px;
     }
+
+    /*
+    main > section > *:nth-child(odd):last-child, 
+    main > section > *:nth-child(3n + 1):last-child,
+    main > section > *:nth-child(3n + 2):last-child{
+         width: calc( 24.7%  - ( var(--element-gap) / 2));
+         margin-right: 0!important;
+    }
+
+    main > section > *:nth-child(3n){
+        margin-right: var(--element-gap)!important;
+    }
+
+    main > section > *{
+        width: calc( 24.7%  - ( var(--element-gap) / 2));
+    }
+
+    main > section > *:nth-child(4n){
+        margin-right: 0!important;
+    }
+    */
 }

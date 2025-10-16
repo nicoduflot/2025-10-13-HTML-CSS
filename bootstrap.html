@@ -6,23 +6,36 @@
     <title>Introduction au HTML - CSS | Formation HTML CSS RWD</title>
     <!-- lien avec le ou les fichiers CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
+    <link rel="stylesheet" href="./css/bs-custom.css" media="all" />
     <script src="./js/bootstrap.bundle.js"></script>
 </head>
-<body id="top">
+<body id="top" data-bs-theme="light">
     <header role="banner">
-        <div class="site-title container">Formation HTML CSS RWD</div>
+        <div class="h1 container">Formation HTML CSS RWD</div>
     </header>
     <nav role="navigation">
-        <ul class="container">
-            <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
-            <li><a href="./media.html" title="Ajouter des media dans une page"><i class="bi bi-film"></i> Media</a></li>
-            <li><a href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-            <li><a href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
-            <li><a href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
-            <li><a href="./design.html" title="Design en CSS"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
-            <li><a href="./exercice.html" title="Mise en pratique des concepts"><i class="bi bi-tools"></i> Exo</a></li>
-            <li><a href="./pages/toto.html" title="toto"><i class="bi bi-person-circle"></i> toto</a></li>
-        </ul>
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link" href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="./media.html" title="Ajouter des media dans une page"><i class="bi bi-film"></i> Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="./design.html" title="Design en CSS"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="./exercice.html" title="Mise en pratique des concepts"><i class="bi bi-tools"></i> Exo</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/toto.html" title="toto"><i class="bi bi-person-circle"></i> toto</a></li>
+                <li class="nav-item">
+                    <button class="btn-sm btn-secondary m-1" id="switchMode" onclick="switchMode('top')">Darkmode</button>
+                </li>
+            </ul>
+            <script>
+                function switchMode(cible){
+                    let mode = document.getElementById(cible).dataset.bsTheme;
+                    console.log(mode);
+                    document.getElementById(cible).dataset.bsTheme = (mode === 'light')? 'dark' : 'light';
+                }
+            </script>
+        </div>
     </nav>
     <main class="container">
         <header>

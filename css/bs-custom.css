@@ -1,0 +1,14 @@
+/*
+:root,
+[data-bs-theme=light] {
+    --custom-link-color: darkred;
+}
+
+[data-bs-theme=dark] {
+    --custom-link-color: rgb(145, 76, 76);
+}
+
+h1, .h1{
+    color: var(--custom-link-color);
+}
+    */
