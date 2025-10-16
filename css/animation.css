@@ -16,3 +16,138 @@
     transform: scale(1.1);
     border: 2px dashed red;
 }
+
+.espace-animation{
+    width: 100%;
+    position: relative;
+    padding-bottom: 30%;
+    margin-bottom: var(--element-gap);
+}
+
+.cercle-animation{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: darkorange;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--bg-nav-color);
+}
+
+.animation{
+    /* description de l'animation */
+    /*
+    animation c'est une propriété raccourcie
+    
+    animation-name              : nom de l'animation
+    animation-duration          : durée de l'animation
+    animation-timing-function   : la vitesse constante ou non de l'animation
+    animation-delay             : le délais avant que l'animation soit jouée
+    animation-iteration-count   : le nombre de fois que se joue l'animation
+    animation-direction         : le "sens" de l'animation (on commence par la première vers la dernière image clef ou l'inverse)
+    */
+
+    animation-name: fleche-qui-bouge;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* il faut faut maintenent définir les images clefs de l'animation nommée "fleche-qui-bouge" */
+
+@keyframes fleche-qui-bouge {
+    0%{
+        left: 0%;
+        top: 25%;
+        transform: rotate(0deg);
+    }
+    25%{
+        top: 0%;
+        transform: rotate(180deg);
+    }
+    50%{
+        top: 25%;
+        left: 70%;
+        transform: rotate(180deg);
+    }
+    65%{
+        top: 65%;
+    }
+    100%{
+        left: 0%;
+        top: 25%;
+        transform: rotate(-360deg);
+    }
+}
+
+.cadre-chargement{
+    width: 100%;
+    border: 1px solid var(--darkgreen);
+    margin: var(--element-gap) 0;
+    height: auto;
+}
+
+.chargement{
+    height: 0.8rem;
+    margin: var(--element-gap) 0;
+}
+
+.charge-01{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s infinite alternate ease-in;
+}
+
+.charge-02{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s infinite alternate ease-in-out;
+}
+
+.charge-03{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s 0.2s infinite alternate ease-in;
+}
+
+.charge-04{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s steps(10, end) infinite alternate;
+}
+
+@keyframes chargement {
+    0%{
+        transform: scaleX(0);
+    }
+    90%{
+        transform: scaleX(1);
+    }/*
+    100%{
+        transform: scaleX(1);
+    }*/
+}
+
+.clignotant{
+    animation: clignoter 0.4s infinite alternate;
+}
+
+@keyframes clignoter{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

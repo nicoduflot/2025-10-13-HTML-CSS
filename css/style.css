@@ -44,6 +44,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     --nav-link-color: white;
     --title-font-size : calc( var(--site-font-size) * 1.8 );
     --title-line-height : calc( var(--title-font-size) * 1.1 );
+    --darkgreen: #072620;
 }
 
 *, *::before, *::after{

@@ -185,10 +185,13 @@
                     border: 1px solid black;
                     padding: 0.5rem;
                     cursor: pointer;
+                    transition: transform 0.2s, box-shadow 0.2s;
                 }
 
                 .exo-anim td:hover{
-
+                    transform: scale(1.1);
+                    background-color: white;
+                    box-shadow: inset 0 0 0 1px black;
                 }
             </style>
             <table class="exo-anim">
@@ -213,7 +216,7 @@
                         <td>3 - 3</td>
                     </tr>
                     <tr>
-                        <td colspan="2" rowspan="2">4 - 1</td>
+                        <td rowspan="2">4 - 1</td>
                         <td>4 - 2</td>
                         <td>4 - 3</td>
                     </tr>
@@ -221,6 +224,7 @@
                         <td>5 - 1</td>
                         <td>5 - 2</td>
                         <td>5 - 3</td>
+                        <td>5 - 4</td>
                     </tr>
                 </tbody>
             </table>
