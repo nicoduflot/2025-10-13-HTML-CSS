@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les formulaires HTML CSS | Formation HTML CSS RWD</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body id="top">
     <header role="banner">
         <div class="site-title">Formation HTML CSS RWD</div>
     </header>
     <nav role="navigation">
         <ul>
-            <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a></li>
+            <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Introduction</a>
+            </li>
             <li><a href="./media.html" title="Ajouter des media dans une page"><i class="bi bi-film"></i> Media</a></li>
-            <li><a href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-            <li><a href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
-            <li><a href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation CSS</a></li>
+            <li><a href="./contact.html" title="Ajouter un formulaire dans une page"><i class="bi bi-envelope-fill"></i>
+                    Contact</a></li>
+            <li><a href="./bootstrap.html" title="Introduction à bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                    Bootstrap</a></li>
+            <li><a href="./animations.html" title="Animation en CSS"><i class="bi bi-camera-reels-fill"></i> Animation
+                    CSS</a></li>
             <li><a href="./design.html" title="Design en CSS"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
             <li><a href="./exercice.html" title="Mise en pratique des concepts"><i class="bi bi-tools"></i> Exo</a></li>
             <li><a href="./pages/toto.html" title="toto"><i class="bi bi-person-circle"></i> toto</a></li>
         </ul>
     </nav>
     <main>
+        <header>
+            <h1>Le design en CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li></li>
+            </ul>
+        </nav>
         <section>
             <article>
                 <header>
-                    <h1>Le design en CSS</h1>
+                    <h2 id="svg">Les SVG</h2>
                 </header>
+                <p>
+                    SVG : Scalable Vector Graphic
+                </p>
+                <p>
+                    Il est possible soit d'appeler un svg comme une image
+                </p>
+                <img src="./images/no-logo-2.svg" />
+                <p>
+                    Un svg ne subit pas d'effet "flou" quand il est affiché plus grand que sa taille d'origine, car il
+                    s'agit en fait d'un fichier XML contenant un ensemble de balise à l'intérieur d'une balise <code>svg</code> qui définissent les formes, les couleur de remplissage et de contour.
+                </p>
+                <p>
+                    Il est possible de les faire soi-même.
+                </p>
+                <svg width="100%" height="10">
+                    <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill: darkred;"></polyline>
+                </svg>
             </article>
         </section>
     </main>
@@ -42,4 +73,5 @@
         </nav>
     </aside>
 </body>
+
 </html>
