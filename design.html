@@ -34,7 +34,10 @@
         </header>
         <nav>
             <ul>
-                <li></li>
+                <li><a href="#svg">Les SVG</a></li>
+                <li><a href="#les-proprietes-du-background">Les propriétés background</a></li>
+                <li><a href="#ombres-texte-et-boite">Les ombres : texte et boîte</a></li>
+                <li><a href="#triangle-css">Triangle CSS</a></li>
             </ul>
         </nav>
         <section>
@@ -51,7 +54,8 @@
                 <img src="./images/no-logo-2.svg" />
                 <p>
                     Un svg ne subit pas d'effet "flou" quand il est affiché plus grand que sa taille d'origine, car il
-                    s'agit en fait d'un fichier XML contenant un ensemble de balise à l'intérieur d'une balise <code>svg</code> qui définissent les formes, les couleurs de remplissage et de contour.
+                    s'agit en fait d'un fichier XML contenant un ensemble de balise à l'intérieur d'une balise
+                    <code>svg</code> qui définissent les formes, les couleurs de remplissage et de contour.
                 </p>
                 <p>
                     Il est possible de les faire soi-même.
@@ -69,6 +73,71 @@
                     <circle cx="150" cy="100" r="90" fill="black" />
                     <text x="150" y="120" font-size="60px" text-anchor="middle" fill="white">Coucou</text>
                 </svg>
+            </article>
+            <article>
+                <header>
+                    <h2 id="les-proprietes-du-background">Les propriétés background</h2>
+                </header>
+                <div class="badge">
+
+                </div>
+                <h3>Le principe du "sprite"</h3>
+                <p>
+                    Utiliser une image qui est en fait une composition de plusieurs images, de même dimension, l'image est appelée en image de fond d'un élément, et on indique des coordonnées pour sélectionner, selon une classe, une des images qui compose l'image principale.
+                </p>
+                <div class="vignette vignette-01"></div>
+                <div class="vignette vignette-02"></div>
+                <div class="vignette vignette-03"></div>
+                <div class="vignette vignette-04"></div>
+            </article>
+            <article>
+                <header>
+                    <h2 id="ombres-texte-et-boite">Les ombres : texte et boîte</h2>
+                </header>
+                <div class="text-shadow text-shadow-01">
+                    Coucou !
+                </div>
+                <div class="text-shadow text-shadow-02">
+                    Coucou !
+                </div>
+                <div class="atari">
+                    Atari
+                </div>
+                <div style="height: 200px; width: 200px;">
+                    <div class="poti-chat">
+    
+                    </div>
+                </div>
+                <div style="height: 200px; width: 200px; position: relative;">
+                    <div class="poti-chat-anime">
+    
+                    </div>
+                </div>
+            </article>
+            <article>
+                <header>
+                    <h2 id="triangle-css">Triangle CSS</h2>
+                </header>
+                <p class="intro">
+                    On exploite les largeur de bordure et leur transpraence ou non pour créer des "triangles" en CSS
+                </p>
+                <div class="triangle">
+
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea obcaecati dolorum, aliquam error fuga ipsum optio ad sint. Cum minima beatae at, optio dolor ut soluta autem tempora quam sed.
+                </p>
+                <h3>Des ruban ready-made</h3>
+                <p>
+                    Le site propose des rubans tout fait
+                </p>
+                <div style="position: relative;">
+                    <div class="ribbon">PROMO !</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, illum porro. Id ipsam excepturi laudantium, suscipit minima perferendis. Debitis, inventore! Iure quia ullam nemo? Unde magnam consequuntur provident natus dicta!
+                </div>
+                <div class="losange">
+                    
+                </div>
             </article>
         </section>
     </main>

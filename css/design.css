@@ -1,0 +1,129 @@
+.badge{
+    width: 200px;
+    height: 200px;
+    margin: var(--element-gap);
+    /*
+    background est une propriété raccourcie
+    background-color, background-size, background-repeat, background-position, background-image, etc.
+    */
+    background: radial-gradient(rgba(0, 255, 0, 0) 50%, rgba(0, 0, 0, 0.8)), 
+                url('../images/pip-boy-boy.png');
+    background-color: brown;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: cadetblue;
+    box-shadow: 0px 0px 5px 1px;
+}
+
+.vignette{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--bg-nav-color);
+    margin: var(--element-gap);
+    border-radius: 50%;
+    background-image: url('../images/multi-vignettes-sm-01.png');
+}
+
+.vignette-01{
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.vignette-02{
+    background-position-x: 50px;
+    background-position-y: 0px;
+}
+
+.vignette-03{
+    background-position-x: 0px;
+    background-position-y: 50px;
+}
+
+.vignette-04{
+    background-position-x: 50px;
+    background-position-y: 50px;
+}
+
+.text-shadow{
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    color: white;
+    margin: var(--element-gap);
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.text-shadow-01{
+    text-shadow: 0 0 10px black;
+}
+
+.text-shadow-02{
+    text-shadow: 1px 1px 0px  black, -1px -1px 0px  black;
+}
+
+.atari{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: calc(var(--element-gap) * 2);
+    padding: 40px;
+    box-shadow: -10px 0 0 darkred, -20px 0 0 orange, inset 10px 0 0 darkblue, inset 20px 0 0 darkgreen;
+    border-left: 10px solid gold;
+    border-top-left-radius: 50%;
+    color: white;
+}
+
+.triangle{
+    margin: var(--element-gap);
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8.6px solid darkred;
+}
+
+.intro::before{
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8.6px solid darkred;
+    content: "";
+    display: inline-block;
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --f: 0.5em; /* control the folded part */
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.8;
+  padding-inline: 1lh;
+  padding-bottom: var(--f);
+  border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+  clip-path: polygon(
+    100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+  transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+  transform-origin: 100% 100%;
+  background-color: #F07818; /* the main color  */
+}
+
+.losange{
+    width: 100px;
+    height: 150px;
+    background-color: darkred;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
